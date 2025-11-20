@@ -53,3 +53,6 @@ Thumbs.db
 # Project specific
 *.log
 
+# Figma prompts (internal use only)
+FIGMA_PROMPT.md
+
