@@ -358,5 +358,88 @@ Crear un sitio web interactivo en Figma que sirva como presentación visual para
 
 ---
 
-**NOTA FINAL**: Este prompt está diseñado para que Figma Make pueda generar un sitio completo y profesional que cubra todos los puntos requeridos en la entrevista técnica. El diseño debe ser visualmente atractivo pero también informativo y técnicamente preciso.
+## 📊 PÁGINA ADICIONAL: TEST SUITE & QUALITY ASSURANCE
+
+**Título Principal**: "Test Suite & Quality Assurance"
+
+**Contenido a Visualizar**:
+
+1. **Resumen de Cobertura** (Card grande con estadísticas):
+   - **42 Tests Totales** ✅
+   - **4 Archivos de Test**
+   - **100% Passing Rate**
+   - Cobertura: Classifier, Disambiguation, End-to-End, Developer Commands
+
+2. **Breakdown por Módulo** (Cards con iconos):
+
+   **test_classifier.py** (12 tests)
+   - ✅ Keyword scoring (case-insensitive, partial matches)
+   - ✅ Regex trigger scoring
+   - ✅ Semantic similarity determinism
+   - ✅ Fake embedding determinism
+   - ✅ Simple classifier ordering and top intent selection
+
+   **test_disambiguation.py** (10 tests)
+   - ✅ Direct resolution (high confidence)
+   - ✅ Ambiguity detection (low confidence, close scores)
+   - ✅ Clarification resolution (keyword/ID matching)
+   - ✅ State persistence across turns
+   - ✅ Structured output validation
+
+   **test_end_to_end.py** (10 tests)
+   - ✅ Complete agent workflow
+   - ✅ State transitions (initial → awaiting → resolved)
+   - ✅ Candidate storage and selection
+   - ✅ Output structure consistency
+
+   **test_developer_commands.py** (10 tests)
+   - ✅ Mode switching (JSON ↔ TOON)
+   - ✅ Mode comparison functionality
+   - ✅ Error handling
+   - ✅ Phase isolation
+
+3. **Por qué estos Tests** (Sección explicativa):
+   - **Reliability**: Garantizar que todos los componentes funcionan correctamente
+   - **Regression Prevention**: Detectar cambios que rompen funcionalidad
+   - **Documentation**: Tests como documentación ejecutable
+   - **Confidence**: Validar cumplimiento de requisitos del PDF
+   - **Quality**: Código de calidad profesional listo para producción
+
+4. **Ejemplo de Test** (Code block):
+   ```python
+   def test_clarification_resolution():
+       """Test full flow: ambiguous → clarification → resolved."""
+       state = IdaState()
+       
+       # Step 1: Ambiguous message
+       result1 = intent_disambiguation_function("I want to handle my money", state)
+       assert result1["status"] == "NEED_CLARIFICATION"
+       
+       # Step 2: User clarifies
+       result2 = intent_disambiguation_function("send money", state)
+       assert result2["status"] == "RESOLVED"
+       assert result2["route_to"] == "send_money"
+   ```
+
+5. **Métricas Visuales** (Gráfico de barras o donut chart):
+   - Tests por módulo (12, 10, 10, 10)
+   - Tasa de éxito (100%)
+   - Cobertura de funcionalidad por componente
+
+**Diseño Visual**:
+- Fondo: Verde claro sutil (#ECFDF5) para indicar éxito
+- Cards: Bordes verdes (#10B981) para tests passing
+- Code block: Fondo oscuro (#1F2937) con syntax highlighting verde
+- Iconos: Checkmarks verdes, números destacados en badges
+- Gráfico: Donut chart o barras horizontales mostrando distribución
+
+**Posición**: Esta página puede ser la última o una página intermedia antes del demo. Sugerencia: Después de la página de State Machine, antes del Live Demo.
+
+**Mensaje Clave**: "42 tests passing garantizan que el código cumple con todos los requisitos y funciona correctamente en todos los escenarios."
+
+---
+
+**NOTA FINAL**: Este prompt está diseñado para que Figma Make pueda generar un sitio completo y profesional que cubra todos los puntos requeridos en la entrevista técnica. El diseño debe ser visualmente atractivo pero también informativo y técnicamente preciso. La página de tests demuestra profesionalismo y calidad del código entregado.
+
+
 
